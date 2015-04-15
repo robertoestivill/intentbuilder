@@ -1,4 +1,4 @@
-YTS Api Client
+Intent Builder
 =========
 
 Android Intent wrapper with fluid API and argument validations.
