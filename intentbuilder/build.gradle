@@ -1,0 +1,18 @@
+apply plugin: 'android-sdk-manager'
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 22
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.0.5-beta'
+}
+
+apply from: '../gradle/gradle-mvn-push.gradle'
