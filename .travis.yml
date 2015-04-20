@@ -2,3 +2,9 @@ language: android
 
 after_success:
 - ./gradlew jacocoTestReport coveralls
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.gradle
