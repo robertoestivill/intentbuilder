@@ -356,11 +356,6 @@ public class IntentBuilder {
         return mIntent;
     }
 
-    public void startActivity(Context context ){
-        context.startActivity(build());
-    }
-
-
     // //////////////////////
     // Private methods
     // //////////////////////
