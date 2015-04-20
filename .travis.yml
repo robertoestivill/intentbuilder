@@ -1,1 +1,4 @@
 language: android
+
+after_success:
+- ./gradlew jacocoTestReport coveralls

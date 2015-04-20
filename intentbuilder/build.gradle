@@ -16,3 +16,4 @@ dependencies {
 }
 
 apply from: '../gradle/gradle-mvn-push.gradle'
+apply from: "../gradle/jacoco.gradle"
