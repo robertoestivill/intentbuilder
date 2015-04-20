@@ -3,8 +3,8 @@ Intent Builder
 
 Android Intent wrapper with fluid API and argument validations.
 
-![Travis build status](https://travis-ci.org/robertoestivill/intentbuilder "Travis build status")
-![Maven central](https://maven-badges.herokuapp.com/maven-central/com.robertoestivill.intentbuilder/intentbuilder/badge.svg "Maven central")
+[![Travis build status](https://travis-ci.org/robertoestivill/intentbuilder.svg "Travis build status")](https://travis-ci.org/robertoestivill/intentbuilder)
+[![Maven central](https://maven-badges.herokuapp.com/maven-central/com.robertoestivill.intentbuilder/intentbuilder/badge.svg "Maven central")](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.robertoestivill.intentbuilder%22)
 [![Coverage Status](https://coveralls.io/repos/robertoestivill/intentbuilder/badge.svg)](https://coveralls.io/r/robertoestivill/intentbuilder)
 
 
