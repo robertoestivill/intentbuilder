@@ -43,10 +43,22 @@ Usage
 The main class of the library is `intentbuilder.IntentBuilder`.
 
 ```java
+
+// Explicit intent
 Intent intent = new IntentBuilder()
             .context(this)
             .activity(MyActivity.class)
             .extra("my_key", "my_value")
+            .build();
+            
+// Implicit intent
+Intent intent = new IntentBuilder()
+            .action("my.app.MY_GREAT_ACTION")
+            .extra("bool_key", true)
+            .extra("int_key", 123)
+            .extra("char_key", 'A')
+            .flags(Intent.FLAG_ACTIVITY_CLEAR_TOP,
+                   Intent.FLAG_ACTIVITY_NO_HISTORY)
             .build();
 ```
 
