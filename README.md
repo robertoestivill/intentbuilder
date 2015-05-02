@@ -6,7 +6,7 @@ Android Intent wrapper with fluid API and argument validations.
 [![Travis build status](https://travis-ci.org/robertoestivill/intentbuilder.svg "Travis build status")](https://travis-ci.org/robertoestivill/intentbuilder)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/com.robertoestivill.intentbuilder/intentbuilder/badge.svg "Maven central")](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.robertoestivill.intentbuilder%22)
 [![Coverage Status](https://coveralls.io/repos/robertoestivill/intentbuilder/badge.svg)](https://coveralls.io/r/robertoestivill/intentbuilder)
-
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Intent%20Builder-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1732)
 
 ---
 Get the code
