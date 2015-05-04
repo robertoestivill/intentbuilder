@@ -57,8 +57,7 @@ Intent intent = new IntentBuilder()
             .extra("bool_key", true)
             .extra("int_key", 123)
             .extra("char_key", 'A')
-            .flags(Intent.FLAG_ACTIVITY_CLEAR_TOP,
-                   Intent.FLAG_ACTIVITY_NO_HISTORY)
+            .flags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             .build();
 ```
 
