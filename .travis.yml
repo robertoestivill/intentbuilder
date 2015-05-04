@@ -1,7 +1,7 @@
 language: android
 
 after_success:
-- ./gradlew jacocoTestReport coveralls
+- ./gradlew jacoco coveralls
 
 sudo: false
 
