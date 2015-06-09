@@ -2,7 +2,7 @@ Change Log
 ==========
 
 
-Version 0.1.1 *in development*
+Version 0.1.1 *(2015-05-09)*
 ----------------------------
 
  * Added missing methods. Issue #2.
