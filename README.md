@@ -23,7 +23,7 @@ Maven
 <dependency>
   <groupId>com.robertoestivill.intentbuilder</groupId>
   <artifactId>intentbuilder</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 
@@ -32,7 +32,7 @@ Gradle
 
 ```groovy
 dependencies {
-    compile 'com.robertoestivill.intentbuilder:intentbuilder:0.1.0'
+    compile 'com.robertoestivill.intentbuilder:intentbuilder:0.1.1'
 }
 ```
 
