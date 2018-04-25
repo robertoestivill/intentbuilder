@@ -252,12 +252,14 @@ public class IntentBuilderTest {
 
   @Test(expected = IllegalArgumentException.class)
   public void flagsNull() {
-    new IntentBuilder().flags(null);
+    int[] sample = null;
+    new IntentBuilder().flags(sample);
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void flagsEmpty() {
-    new IntentBuilder().flags(new int[]{});
+    int[] sample = {};
+    new IntentBuilder().flags(sample);
   }
 
   @Test
@@ -270,13 +272,36 @@ public class IntentBuilderTest {
   @Test
   public void flagsTwo() {
     Intent mock = mock(Intent.class);
-    new IntentBuilder(mock).flags(
-            Intent.FLAG_ACTIVITY_CLEAR_TASK,
-            Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    verify(mock, times(1)).addFlags(
-            Intent.FLAG_ACTIVITY_CLEAR_TASK);
-    verify(mock, times(1)).addFlags(
-            Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    new IntentBuilder(mock).flags(Intent.FLAG_ACTIVITY_CLEAR_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    verify(mock, times(1)).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+    verify(mock, times(1)).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+  }
+
+  @Test
+  public void categoriesOne() {
+    Intent mock = mock(Intent.class);
+    new IntentBuilder(mock).categories(Intent.CATEGORY_APP_BROWSER);
+    verify(mock, times(1)).addCategory(Intent.CATEGORY_APP_BROWSER);
+  }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void categoriesNull() {
+    String[] sample = null;
+    new IntentBuilder().categories(sample);
+  }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void categoriesEmpty() {
+    String[] sample = {};
+    new IntentBuilder().categories(sample);
+  }
+
+  @Test
+  public void categoriesTwo() {
+    Intent mock = mock(Intent.class);
+    new IntentBuilder(mock).categories(Intent.CATEGORY_APP_BROWSER, Intent.CATEGORY_APP_EMAIL);
+    verify(mock, times(1)).addCategory(Intent.CATEGORY_APP_BROWSER);
+    verify(mock, times(1)).addCategory(Intent.CATEGORY_APP_EMAIL);
   }
 
   @Test(expected = IllegalArgumentException.class)
@@ -1126,6 +1151,24 @@ public class IntentBuilderTest {
   // //////////////////////
 
   static class MyObject implements Parcelable, Serializable {
+
+    MyObject() {
+    }
+
+    MyObject(Parcel in) {
+    }
+
+    public static final Creator<MyObject> CREATOR = new Creator<MyObject>() {
+      @Override
+      public MyObject createFromParcel(Parcel in) {
+        return new MyObject(in);
+      }
+
+      @Override
+      public MyObject[] newArray(int size) {
+        return new MyObject[size];
+      }
+    };
 
     @Override
     public int describeContents() {

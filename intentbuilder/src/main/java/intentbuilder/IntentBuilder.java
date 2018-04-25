@@ -142,6 +142,14 @@ public class IntentBuilder {
     return this;
   }
 
+  public IntentBuilder categories(String... categories) {
+    validateNotEmpty(categories, "Categories");
+    for (String category : categories) {
+      mIntent.addCategory(category);
+    }
+    return this;
+  }
+
   public IntentBuilder extras(Bundle extras) {
     validateNotNull(extras, "Extras bundle");
     mIntent.putExtras(extras);
